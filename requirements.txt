@@ -1,0 +1,8 @@
+torch
+chronos-forecasting
+pandas
+numpy
+scikit-learn
+plotly
+pytest
+streamlit
