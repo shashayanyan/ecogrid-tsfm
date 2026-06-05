@@ -31,3 +31,28 @@ cd ecogrid-tsfm
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+### 2. Run the Dashboard
+```bash
+streamlit run app.py
+```
+
+### 3. Run tests
+```bash
+pytest tests/ -v
+```
+
+## Repo Structure
+```txt
+├── .github/workflows/   # CI/CD pipelines (test.yml)
+├── data/                # Raw commercial building datasets (BDG2)
+├── notebooks/           # Jupyter notebooks for EDA and Data Storytelling
+├── src/
+│   ├── data_loader.py   # OOP data ingestion and cleaning
+│   └── forecaster.py    # Hugging Face TSFM pipeline wrapper
+├── tests/               # Pytest suite with mock tensors
+├── app.py               # Streamlit interactive dashboard
+├── requirements.txt     # Python dependencies
+└── README.md            # Project documentation
+```
